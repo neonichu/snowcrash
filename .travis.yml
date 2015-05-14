@@ -5,6 +5,7 @@ compiler:
 script:
   - ./configure
   - make test
+  - pod lib lint snowcrash.podspec --allow-warnings
 before_install:
   - git submodule update --init --recursive
   - rvm use $RVM --install --binary --fuzzy
